@@ -1,0 +1,168 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{cite}
+
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{amscd, amssymb, amsthm, amsfonts}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[dvips]{geometry}
+
+\usepackage[all]{xy}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{color}
+%\usepackage{theorem}
+\usepackage{fancyhdr}
+\usepackage{marginnote}
+%\usepackage[retainorgcmds]{IEEEtrantools}
+%\usepackage{IEEEtrantools}
+%\usepackage{IEEEtran}
+
+
+\geometry{left=2cm, right=1.5cm, top=2.5cm, bottom=2.5cm}
+\usepackage{makeidx}
+\makeindex
+
+%\pagestyle{headings}
+
+%\singlespacing
+%\onehalfspacing
+%\doublespacing
+
+\linespread{1.3}
+
+
+
+\newtheorem{prob}{Problema}
+\newtheorem{teo}{Teorema}[chapter]
+
+\newtheorem{prop}{Proposi\c c\~ao}[chapter]
+\newtheorem{lema}{Lema}[chapter]
+\newtheorem{cor}{Corol\'ario}[chapter]
+
+\newtheorem{exs}{Exemplos}[chapter]
+\newtheorem{exer}{Exerc\'icio}[chapter]
+\newtheorem{obs}{Observa\c c\~ao}[chapter]
+\newtheorem{af}{Afirma\c c\~ao}[chapter]
+\newtheorem{met}{M\'etodo}[chapter]
+\newtheorem{obss}{Observa\c c\~oes}[chapter]
+\newtheorem{exems}{Exemplos}[chapter]
+\newtheorem{diag}{diagrama}[chapter]
+
+
+\theoremstyle{definition}%alterar fonte dos ambientes newtheorem
+\newtheorem{apli}{Aplica\c c\~ao}[chapter]
+\newtheorem{exem}{Exemplo}[chapter]
+\newtheorem{defin}{Defini\c c\~ao}[chapter]
+\newenvironment{dem}[1][Demonstra\c c\~ao]
+{\noindent\textbf{#1.} }{\hfill\rule{0.5em}{0.5em}}
+
+
+
+%ATALHOS
+
+
+\newcommand{\vsc}{\vspace{0.5cm}}
+\newcommand{\vsu}{\vspace{1.0cm}}
+
+%\newenvironment{defin}{\bf Defini\c c\~ao:\sl}{\vspace{3mm}}
+%\newenvironment{exem}{{\bf Exemplos: }}{\vspace{3mm}}
+\newcommand{\To}{\rightarrow}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\dro}{\partial}
+\newcommand{\dsp}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Sch}{\mathscr{S}}
+\newcommand{\parag}{\hspace{0,64cm}}
+\newcommand{\recuo}{\hspace{-0,58cm}}
+\newcommand{\til}{\widetilde}
+\newcommand{\Om}{\Omega}
+\newcommand{\lap}{\Delta}
+\newcommand{\boundary}{\partial}
+\newcommand{\ovl}{\overline}
+\renewcommand{\sin}{\text{sen}\hspace{0.08cm}}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\Lra}{\Longrightarrow}
+\newcommand{\App}{\appendix}
+
+%\newenvironment{prova}{\noindent{\bf Prova:}}{\vspace{3mm}}
+
+\newenvironment{solucao}{\noindent{\bf Solu\c c\~ao:}}{\vspace{3mm}}
+
+%\newenvironment{dem1}[1][Demonstra\c c\~ao]{\noindent\textbf{#1:} }{}
+\newenvironment{prova}[1][Demonstra\c c\~ao]{\noindent\textbf{#1:} }{\hfill\rule{0.5em}{0.5em}}
+\pretolerance=10000
+
+\usepackage{pdfpages}
+
+\usepackage[titletoc]{appendix}
+\renewcommand{\appendixname}{Apêndice}
+\renewcommand{\appendixtocname}{Apêndice}
+%\renewcommand*{\cftappendixname}{\appendixname\enspace}
+
+
+
+%\pagenumbering{arabic}
+
+
+%\includeonly{chap3}
+
+
+
+\author{Maria Raiza Rodrigues Pereira}
+
+\date{\today}
+\setlength{\marginparwidth}{2cm}
+
+\begin{document}
+\pagenumbering{roman}
+\include{Pretexto}
+%\include{Agradecimentos}
+\tableofcontents
+
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{%
+\markboth{\thechapter.\ #1}{}}
+\fancyhead[L]{\nouppercase \leftmark}
+\fancyhead[R]{}
+
+
+
+
+%\include{Notacoes}
+%\include{Resumo}
+
+%\pagenumbering{arabic}
+
+%\include{introd}
+\include{Resumo}
+\include{caps/cap1}
+\include{caps/linguagem}
+\include{caps/principais_app}
+\include{caps/versoes}
+\include{caps/aplicacao}
+\include{caps/conclusao}
+%\include{chap3}
+
+
+
+\bibliographystyle{plain}
+\bibliography{referencias}
+%\begin{thebibliography}{99}
+    %\bibitem{almeida} Almeida, H. P., {\it Introdução a Teoria dos Códigos}, Editora da UFPB, 1999.
+    %\bibitem{silva} Silva, A. A., {\it Matemática Elementar}, notas de aula, 1997.
+%\end{thebibliography}
+
+
+
+
+\end{document}
