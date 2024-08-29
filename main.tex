@@ -24,15 +24,7 @@
 %\usepackage[retainorgcmds]{IEEEtrantools}
 %\usepackage{IEEEtrantools}
 %\usepackage{IEEEtran}
-\usepackage{titlesec}
-
-% Redefine the chapter command to show only the number and title without "Capítulo"
-\titleformat{\chapter}[hang]
-  {\normalfont\LARGE\bfseries}
-  {\thechapter}{1em}{}
-
-\renewcommand\thechapter{\arabic{chapter}}
-\renewcommand\thesection{\thechapter.\arabic{section}}
+\renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 
 \geometry{left=2cm, right=1.5cm, top=2.5cm, bottom=2.5cm}
